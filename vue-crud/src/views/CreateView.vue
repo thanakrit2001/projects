@@ -23,6 +23,7 @@ const password = ref('1212312121')
 const email = ref('thanakrit@gmail.com')
 const avatar = ref('https://www.melivecode.com/users/cat.png')
 
+// Create user and set data to new user
 const onSubmit = () => {
   const myHeaders = new Headers()
   myHeaders.append('Content-Type', 'application/json')

@@ -36,7 +36,6 @@ const fetchData = () => {
       password.value = result.user.password
       email.value = result.user.email
       avatar.value = result.user.avatar
-      
     })
     .catch((error) => console.error(error))
 }

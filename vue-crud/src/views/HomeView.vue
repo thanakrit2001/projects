@@ -49,6 +49,7 @@ const columns = ref([
 
 const rows = ref([])
 
+//Fetch data from API
 const fetchData = () => {
   fetch('https://www.melivecode.com/api/users')
     .then((response) => response.json())
@@ -58,10 +59,12 @@ const fetchData = () => {
 }
 fetchData()
 
+// Route to edit view by id
 const onEdit = (id) => {
   router.push('/update/' + id)
 }
 
+// Delete user from database using api call and then refresh the table
 const onDelete = (id) => {
   const myHeaders = new Headers()
   myHeaders.append('Content-Type', 'application/json')
@@ -86,6 +89,7 @@ const onDelete = (id) => {
     .catch((error) => console.error(error))
 }
 
+// Route to create view
 const onCreate = () => {
   router.push('/create')
 }
